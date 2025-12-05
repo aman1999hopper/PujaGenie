@@ -29,11 +29,11 @@ const PoojaCard: FC<{ pooja: Pooja }> = ({ pooja }) => {
       </div>
 
       <div className="p-3">
-        <h3 className="font-semibold text-lg">{pooja.title}</h3>
+        <h3 className="font-semibold text-lg text-gray-700">{pooja.title}</h3>
         <p className="text-sm text-gray-600 mt-1">{pooja.shortDesc}</p>
 
         <div className="mt-3 flex items-center justify-between">
-          <span className="font-medium">
+          <span className="font-medium text-gray-500">
             ₹{(pooja.price / 100).toFixed(2)}
           </span>
           <span className="text-xs text-gray-500">

@@ -1,0 +1,14 @@
+{
+  "brand": "PujaGenie",
+  "tagline": "Book Pooja & Hawan, Anytime. Anywhere.",
+  "description": "A sacred platform to book authentic Pooja, Hawan and rituals with verified Pandits. Transparent pricing, trusted services and complete spiritual guidance — delivered to your home.",
+  "features": [
+    { "title": "Fast Setup", "desc": "Run in minutes and customize easily." },
+    { "title": "Mobile Ready", "desc": "Responsive by design — looks great on all devices." },
+    { "title": "Accessible", "desc": "Keyboard and screen-reader friendly." },
+    { "title": "Animatable", "desc": "Polished micro-interactions." },
+    { "title": "SEO Friendly", "desc": "Meta tags & semantic markup." },
+    { "title": "CMS Ready", "desc": "Replace JSON with a remote CMS or API." }
+  ],
+  "cta": { "title": "Start your puja now", "sub": "Create a puja, choose services and book a priest.", "button": "Get Started" }
+}

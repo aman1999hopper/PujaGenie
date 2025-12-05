@@ -1,18 +1,43 @@
-import useSWR from 'swr'
-import PoojaCard from '../components/PoojaCards'
-import axios from 'axios'
+import type { GetStaticProps, NextPage } from 'next'
+import fs from 'fs'
+import path from 'path'
 
-const fetcher = (url: string) => axios.get(url).then(r => r.data)
+import Navbar from '../components/Navbar'
+import Hero from '../components/Hero'
+import Features from '../components/Features'
+import CTA from '../components/CTA'
+import Footer from '../components/Footer'
 
-export default function Home() {
-  const { data: poojas } = useSWR('/api/poojas', fetcher, { refreshInterval: 0 })
+type HomeData = {
+  brand: string
+  tagline: string
+  description: string
+  features: { title: string; desc: string }[]
+  cta: { title: string; sub: string; button: string }
+}
 
+export const getStaticProps: GetStaticProps = async () => {
+  const filePath = path.join(process.cwd(), 'data', 'home.json')
+  const json = fs.readFileSync(filePath, 'utf-8')
+  const data: HomeData = JSON.parse(json)
+
+  return {
+    props: { data }
+  }
+}
+
+const Home: NextPage<{ data: HomeData }> = ({ data }) => {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6">Pooja & Yagna</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {poojas?.map((p: any) => <PoojaCard key={p.id} pooja={p} />)}
-      </div>
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white antialiased">
+      <Navbar brand={data.brand} />
+      <main className="max-w-6xl mx-auto px-6 py-12">
+        <Hero tag={data.tagline} desc={data.description} />
+        <Features features={data.features} />
+        <CTA cta={data.cta} />
+        <Footer brand={data.brand} />
+      </main>
     </div>
   )
 }
+
+export default Home

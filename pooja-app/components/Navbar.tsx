@@ -37,34 +37,34 @@ export default function Navbar({ brand }: { brand: string }) {
             </span>
 
             {poojaOpen && (
-              <div className="absolute left-0 top-7 bg-white/10 backdrop-blur border border-white/20 rounded-lg shadow-xl p-4 w-52 animate-fadeIn">
+              <div className="absolute left-0 top-6 bg-white/90 text-gray-700 backdrop-blur border border-white/20 rounded-lg shadow-xl p-4 w-52 animate-fadeIn">
                 <Link
                   href="/pooja/satyanarayan"
-                  className="block py-2 hover:text-indigo-300"
+                  className="block py-2 hover:text-gray-950"
                 >
                   Satyanarayan Pooja
                 </Link>
                 <Link
                   href="/pooja/grih-pravesh"
-                  className="block py-2 hover:text-indigo-300"
+                  className="block py-2 hover:text-gray-950"
                 >
                   Grih Pravesh Pooja
                 </Link>
                 <Link
                   href="/pooja/marriage"
-                  className="block py-2 hover:text-indigo-300"
+                  className="block py-2 hover:text-gray-950"
                 >
                   Marriage Pooja
                 </Link>
                 <Link
                   href="/pooja/havan"
-                  className="block py-2 hover:text-indigo-300"
+                  className="block py-2 hover:text-gray-950"
                 >
                   Havan / Homam
                 </Link>
                 <Link
                   href="/pooja/navgrah"
-                  className="block py-2 hover:text-indigo-300"
+                  className="block py-2 hover:text-gray-950"
                 >
                   Navgrah Shanti Pooja
                 </Link>

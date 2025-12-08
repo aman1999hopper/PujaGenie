@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 
-export default function Navbar({ brand }: { brand: string }) {
+export default function Navbar({ brand, onAuthOpen }: { brand: string; onAuthOpen?: () => void }) {
   const [open, setOpen] = useState(false); // mobile menu
   const [poojaOpen, setPoojaOpen] = useState(false); // pooja dropdown
 
@@ -84,6 +84,7 @@ export default function Navbar({ brand }: { brand: string }) {
           <Link
             href="#cta"
             className="px-4 py-2 rounded-md bg-indigo-500 text-black font-medium"
+            onClick={onAuthOpen}
           >
             Get Started
           </Link>

@@ -2,8 +2,15 @@
 import Link from "next/link";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
+import { SignInButton } from "@clerk/nextjs";
 
-export default function Navbar({ brand, onAuthOpen }: { brand: string; onAuthOpen?: () => void }) {
+export default function Navbar({
+  brand,
+  onAuthOpen,
+}: {
+  brand: string;
+  onAuthOpen?: () => void;
+}) {
   const [open, setOpen] = useState(false); // mobile menu
   const [poojaOpen, setPoojaOpen] = useState(false); // pooja dropdown
 
@@ -81,13 +88,15 @@ export default function Navbar({ brand, onAuthOpen }: { brand: string; onAuthOpe
           <a href="#contact" className="hover:text-indigo-300">
             Contact
           </a>
-          <Link
-            href="#cta"
-            className="px-4 py-2 rounded-md bg-indigo-500 text-black font-medium"
-            onClick={onAuthOpen}
-          >
-            Get Started
-          </Link>
+          <SignInButton mode="modal">
+            <Link
+              href="#cta"
+              className="px-4 py-2 rounded-md bg-indigo-500 text-black font-medium"
+              onClick={onAuthOpen}
+            >
+              Get Started
+            </Link>
+          </SignInButton>
         </nav>
 
         {/* Mobile Toggle */}

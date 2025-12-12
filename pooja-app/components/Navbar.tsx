@@ -66,6 +66,8 @@ export default function Navbar({ brand }: { brand: string }) {
           </div>
 
           <a href="#features" className="hover:text-indigo-300">Features</a>
+          <Link href="/dashboard" className="block py-2">Dashboard
+          </Link>
           <a href="#pricing" className="hover:text-indigo-300">Pricing</a>
           <a href="#contact" className="hover:text-indigo-300">Contact</a>
 

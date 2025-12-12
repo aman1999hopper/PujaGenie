@@ -26,7 +26,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
           animate={{ opacity: open ? 1 : 0 }}
           className="font-bold text-xl text-gray-800 mb-6"
         >
-          🔥 Hawan Panel
+        PujaGenie
         </motion.h1>
 
         {/* Menu */}
@@ -49,8 +49,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
       {/* Main Content */}
       <div className="flex-1 flex flex-col">
         {/* Topbar */}
-        <div className="w-full bg-white shadow-md h-16 flex items-center justify-between px-6 text-gray-800">
-          <h2 className="text-xl font-semibold">Dashboard</h2>
+        <div className="w-full bg-white shadow-md h-16 flex items-center justify-end px-6 text-gray-800">
           <UserButton />
         </div>
 

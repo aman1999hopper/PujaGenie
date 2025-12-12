@@ -17,7 +17,7 @@ export default function Sidebar() {
         <div className="flex items-center justify-between px-4 py-4 border-b">
           <Link href="/dashboard" className="flex items-center gap-2">
             <div className="text-indigo-600 font-bold text-lg">PG</div>
-            {!collapsed && <div className="font-semibold">PujaGenie</div>}
+            {!collapsed && <div className="font-semibold text-indigo-600">PujaGenie</div>}
           </Link>
           <button
             aria-label="Toggle sidebar"
